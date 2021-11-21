@@ -1,0 +1,13 @@
+<h1 style="color: #5e9ca0;">This App predicts any STOCK price</h1>
+<h2 style="color: #2e6c80;">Please enter the following information:</h2>
+<ul style="list-style-type: square;">
+<li>Stock Name is the CAPITALIZED letters for the stock. AAPL fpr Apple, BTC-USD fro Bitcoin, TSLA for Tesla. <img src="https://html-online.com/editor/tiny4_9_11/plugins/emoticons/img/smiley-laughing.gif" alt="laughing" /></li>
+<li>Ahead is the number of days you want predict ahead of time. Less the number in "Ahead", higher the accuracy beacasue machine will have hard time predicting further into the future.&nbsp; <img src="https://html-online.com/editor/tiny4_9_11/plugins/emoticons/img/smiley-cool.gif" alt="cool" /></li>
+</ul>
+<p>&nbsp;</p>
+
+<form action="/data" method = "POST">
+    <p>Stock Name<input type = "text" name = "Name" /></p>
+    <p>Ahead<input type = "number" name = "Ahead" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
