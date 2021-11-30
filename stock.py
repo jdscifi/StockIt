@@ -56,7 +56,7 @@ def hello():
 
     """Parse historical data of 5yrs from Yahoo Finance"""
 
-    hist = stock.history(period="2y")
+    hist = stock.history(period="15mo")
 
 
     """Create training and test dataset. Training dataset is
