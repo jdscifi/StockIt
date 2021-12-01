@@ -54,7 +54,7 @@ def hello():
     stock = yf.Ticker(stock_name)
 
 
-    """Parse historical data of from Yahoo Finance"""
+    """Parse historical data from Yahoo Finance"""
 
     hist = stock.history(period="15mo")
 
