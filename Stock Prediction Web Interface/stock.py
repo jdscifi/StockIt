@@ -54,7 +54,7 @@ def hello():
     stock = yf.Ticker(stock_name)
 
 
-    """Parse historical data of 5yrs from Yahoo Finance"""
+    """Parse historical data of from Yahoo Finance"""
 
     hist = stock.history(period="15mo")
 
@@ -178,13 +178,13 @@ def hello():
 
     float(predicted_stock_price[-1])
 
-    print("Tomorrow's predicted price = $",float(predicted_stock_price[-1]))
+    print("Tomorrow's predicted price = $",float("%.2f"%predicted_stock_price[-1]))
 
     """Send the plot to plot.html"""
 
 
 
-    stock_prediction=float(predicted_stock_price[-1])
+    stock_prediction=float("%.2f"%predicted_stock_price[-1])
     html = f"Tomorrow predicted price is $ {stock_prediction}"
 
     if predicted_stock_price[-1]<df['Close'].tail(1).iloc[0]:
@@ -200,6 +200,6 @@ def hello():
     plot_url = base64.b64encode(STOCK.getvalue()).decode('utf8')
     return render_template("plot.html", plot_url=plot_url,html=html,decision=decision)
 
-    print("Tomorrow's predicted price = $", float(predicted_stock_price[-1]))
+    print("Tomorrow's predicted price = $", float("%.2f"%predicted_stock_price[-1]))
 
 app.run()
